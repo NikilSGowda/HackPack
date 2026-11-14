@@ -1,0 +1,35 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        cyber: {
+          bg: '#0a0e17',
+          card: '#111827',
+          cardBorder: '#1f2937',
+          neonCyan: '#06b6d4',
+          neonEmerald: '#10b981',
+          neonAmber: '#f59e0b',
+          neonRose: '#f43f5e',
+          neonPurple: '#a855f7',
+        }
+      },
+      animation: {
+        'pulse-fast': 'pulse 1.2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
+      },
+      keyframes: {
+        glow: {
+          '0%': { boxShadow: '0 0 5px rgba(6, 182, 212, 0.2), 0 0 10px rgba(6, 182, 212, 0.2)' },
+          '100%': { boxShadow: '0 0 20px rgba(6, 182, 212, 0.6), 0 0 30px rgba(6, 182, 212, 0.4)' },
+        }
+      }
+    },
+  },
+  plugins: [],
+}
